@@ -4,6 +4,7 @@ import net.minecraft.init.Blocks;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.Biome;
+import net.minecraft.world.gen.feature.WorldGenAbstractTree;
 import net.minecraft.world.gen.feature.WorldGenBlockBlob;
 import net.minecraftforge.event.terraingen.DecorateBiomeEvent;
 import prospector.traverse.config.TraverseConfig;
@@ -17,11 +18,10 @@ public class BiomeCliffs extends Biome implements WorldGenConstants {
     public static BiomeProperties properties = new BiomeProperties("Cliffs");
 
     static {
-        properties.setTemperature(0.4F);
-        properties.setRainfall(1.2F);
-        properties.setRainDisabled();
-        properties.setBaseHeight(3.6F);
-        properties.setHeightVariation(0.5F);
+        properties.setTemperature(0.22F);
+        properties.setRainfall(0.4F);
+        properties.setBaseHeight(4.5F);
+        properties.setHeightVariation(0.2F);
     }
 
     public BiomeCliffs() {
@@ -29,6 +29,13 @@ public class BiomeCliffs extends Biome implements WorldGenConstants {
         this.topBlock = Blocks.STONE.getDefaultState();
         this.fillerBlock = Blocks.STONE.getDefaultState();
         this.spawnableCreatureList.clear();
+        
+        /*if (this.getBaseHeight() > 4.4F)
+        {
+            this.spawnableCreatureList.add(new Biome.SpawnListEntry(EntityLlama.class, 5, 4, 6));
+        }*/
+
+        this.decorator.treesPerChunk = 2;
     }
 
     @Override
@@ -44,4 +51,13 @@ public class BiomeCliffs extends Biome implements WorldGenConstants {
         }
         super.decorate(worldIn, rand, pos);
     }
+    
+    /*@Override
+	public WorldGenAbstractTree getRandomTreeFeature(Random rand) {
+		if (rand.nextInt(2) == 0) {
+			return SPRUCE_TREE_FEATURE2;
+		}
+		
+		return FIR_TREE_FEATURE;
+	}*/
 }

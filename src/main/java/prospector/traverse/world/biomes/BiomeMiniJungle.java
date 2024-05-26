@@ -23,7 +23,7 @@ public class BiomeMiniJungle extends Biome implements WorldGenConstants {
         properties.setTemperature(Biomes.JUNGLE.getDefaultTemperature());
         properties.setRainfall(Biomes.JUNGLE.getRainfall());
         properties.setBaseHeight(-0.1F);
-        properties.setHeightVariation(0.5F);
+        properties.setHeightVariation(0.45F);
         properties.setWaterColor(0xFF24B01C);
     }
 
@@ -36,7 +36,7 @@ public class BiomeMiniJungle extends Biome implements WorldGenConstants {
         decorator.clayPerChunk = 3;
         decorator.waterlilyPerChunk = 12;
 
-        this.spawnableMonsterList.add(new Biome.SpawnListEntry(EntityOcelot.class, 1, 1, 1));
+        this.spawnableMonsterList.add(new Biome.SpawnListEntry(EntityOcelot.class, 10, 1, 1));
         this.spawnableCreatureList.add(new Biome.SpawnListEntry(EntityChicken.class, 4, 4, 4));
         this.spawnableCreatureList.add(new Biome.SpawnListEntry(EntityParrot.class, 40, 1, 2));
 
