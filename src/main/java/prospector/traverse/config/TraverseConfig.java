@@ -87,8 +87,6 @@ public class TraverseConfig {
 		disableAridHighland = config.get(CATEGORY_BIOMES, "disableAridHighland", disableAridHighland, "Force disable the Arid Highland biome").getBoolean();
 		disableRockyPlains = config.get(CATEGORY_BIOMES, "disableRockyPlains", disableRockyPlains, "Force disable the Rocky Plains biome").getBoolean();
 
-		enableNewTextures = config.get(Configuration.CATEGORY_CLIENT, "enableNewTextures", enableNewTextures, "Enable the new Traverse textures in the newer minecraft style").getBoolean();
-
 		config.save();
 	}
 
