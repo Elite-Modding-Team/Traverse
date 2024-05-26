@@ -1,5 +1,7 @@
 # Traverse Legacy (1.12.2)
 
-### Traverse Legacy (1.12.2) is now deprecated. For Traverse for 1.14.4+ using Fabric can be found here: https://github.com/TerraformersMC/Traverse
+Fork of Traverse for 1.12.2.
 
-Adds some cool biomes and stuff
+Content from this fork is licensed under GNU Lesser General Public License v3 (see LICENSE.txt).
+
+Textures originating from ExtrabiomesXL are licensed under [Creative Commons 3 ShareAlike](https://creativecommons.org/licenses/by-sa/3.0/) (see LICENSE-EBXL.txt).
